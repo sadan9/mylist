@@ -51,7 +51,8 @@ domainlist = []
 
 for line in tfs.readlines():
         if re.findall(comment_pattern, line):
-                print ('this is a comment line: ' + line)
+                pass
+                #print ('this is a comment line: ' + line)
                 #fs.write('#' + line)
         else:
                 domain = re.findall(domain_pattern, line)
