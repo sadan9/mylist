@@ -73,4 +73,3 @@ print ('moving generated file to dnsmasg directory')
 shutil.move(outfile, rulesfile)
 
 print ('done!')
-"a.py" [New] 75L, 2303C written
