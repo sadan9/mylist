@@ -74,4 +74,4 @@ shutil.move(outfile, rulesfile)
 
 print ('done!')
 
-exit 0
+exit(0)
