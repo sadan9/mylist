@@ -73,3 +73,5 @@ print ('moving generated file to dnsmasg directory')
 shutil.move(outfile, rulesfile)
 
 print ('done!')
+
+exit 0
