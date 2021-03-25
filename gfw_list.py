@@ -58,9 +58,9 @@ for line in tfs.readlines():
                 if domain:
                         try:
                                 found = domainlist.index(domain[0])
-                                print (domain[0] + ' exists.')
+                                #print (domain[0] + ' exists.')
                         except ValueError:
-                                print ('saving ' + domain[0])
+                                #print ('saving ' + domain[0])
                                 domainlist.append(domain[0])
                                 fs.write('DOMAIN-SUFFIX,%s,gfw_domian_list\n'%domain[0])
                 else:
