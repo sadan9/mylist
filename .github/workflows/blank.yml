@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: CheckOut
-        uses: actions/checkout@v2
+        uses: actions/checkout@master
 
       # Runs a single command using the runners shell
       - name: Install Requestments
@@ -26,7 +26,6 @@ jobs:
       - name: copy config fil
         run: cp -f /tmp/gfwlist.conf ./gfwlist.conf
       - name: commit changes
-        run: |
-          git add .
-          git commit -m "generated"
-          git push
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
