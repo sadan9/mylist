@@ -26,7 +26,7 @@ domain_pattern = '([\w\-\_]+\.[\w\.\-\_]+)[\/\*]*'
 tmpfile = '/tmp/gfwlisttmp'
 # do not write to router internal flash directly
 outfile = '/tmp/gfwlist.conf'
-rulesfile = '/APL/gfwlist_rule.conf'
+
 
 fs =  open(outfile, 'w')
 fs.write('# gfw list  rules\n')
@@ -69,8 +69,6 @@ for line in tfs.readlines():
 tfs.close()
 fs.close();
 
-print ('moving generated file to dnsmasg directory')
-shutil.move(outfile, rulesfile)
 
 print ('done!')
 
